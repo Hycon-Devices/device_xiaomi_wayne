@@ -24,18 +24,14 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
-# Inherit some common stuff from Project-Awaken
-AWAKEN_BUILD_TYPE := OFFICIAL
-$(call inherit-product, vendor/awaken/config/common.mk)
-$(call inherit-product, vendor/awaken/config/gsm.mk)
-
-# Gapps
-USE_GAPPS := true
-IS_PHONE := true
+# Inherit some common stuff from PixelExtended
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+PEX_BUILD_TYPE := OFFICIAL
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
@@ -50,6 +46,6 @@ TARGET_SCREEN_DENSITY := 400
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := awaken_wayne
+PRODUCT_NAME := aosp_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X

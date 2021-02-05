@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2017-2019 The LineageOS Project
 # Copyright (C) 2018-2020 The Xiaomi-SDM660 Project
-# Copyright (C) 2020 Project-Awaken
+# Copyright (C) 2021 PixelExtended
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
