@@ -21,11 +21,11 @@
 # definition file).
 #
 
-# inherit device config for PixelExtended
+# inherit device config for Octavi OS
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_wayne.mk
+    $(LOCAL_DIR)/octavi_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_wayne-eng \
-    aosp_wayne-userdebug \
-    aosp_wayne-user
+    octavi_wayne-eng \
+    octavi_wayne-userdebug \
+    octavi_wayne-user

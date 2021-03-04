@@ -24,15 +24,10 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
-# Inherit some common stuff from PixelExtended
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-PEX_BUILD_TYPE := OFFICIAL
-PEX_MAINTAINER := chdelacr
-TARGET_GAPPS_ARCH := arm64
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+# Inherit some common stuff from Octavi OS
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
+OCTAVI_BUILD_TYPE := Official
+OCTAVI_DEVICE_MAINTAINER := chdelacr
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
@@ -47,6 +42,6 @@ TARGET_SCREEN_DENSITY := 400
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_wayne
+PRODUCT_NAME := octavi_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
