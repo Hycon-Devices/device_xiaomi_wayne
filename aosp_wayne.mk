@@ -24,14 +24,14 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
-# Inherit PPUI product configuration
+# Inherit Hycon product configuration
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-CUSTOM_BUILD_TYPE := OFFICIAL
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+HYCON_BUILD_TYPE := OFFICIAL
+TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_USES_FACE_UNLOCK := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ppui.device_name=wayne \
